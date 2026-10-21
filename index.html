@@ -485,38 +485,43 @@
     <!-- LANGUAGE SWITCHING SCRIPT -->
     <script>
         function setLanguage(lang) {
-            // Hide all language content
-            document.querySelectorAll('.lang-ar, .lang-fr, .lang-en').forEach(el => {
-                el.style.display = 'none';
-            });
+    // Masquer tous les contenus
+    document.querySelectorAll('.lang-ar, .lang-fr, .lang-en, .lang-de').forEach(el => {
+        el.style.display = 'none';
+    });
 
-            // Reset buttons style
-            ['ar', 'fr', 'en'].forEach(l => {
-                const btn = document.getElementById(`btn-${l}`);
-                btn.className = "px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900";
-            });
-
-            // Show selected language content
-            document.querySelectorAll(`.lang-${lang}`).forEach(el => {
-                el.style.display = 'block';
-            });
-
-            // Active button style
-            const activeBtn = document.getElementById(`btn-${lang}`);
-            activeBtn.className = "px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm";
-
-            // HTML dir attribute
-            if (lang === 'ar') {
-                document.documentElement.dir = 'rtl';
-                document.documentElement.lang = 'ar';
-            } else {
-                document.documentElement.dir = 'ltr';
-                document.documentElement.lang = lang;
-            }
+    // Réinitialiser le style des boutons
+    ['ar', 'fr', 'en', 'de'].forEach(l => {
+        const btn = document.getElementById(`btn-${l}`);
+        if (btn) {
+            btn.className = "px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900";
         }
+    });
 
-        // Initialize with Arabic
-        setLanguage('ar');
+    // Afficher la langue sélectionnée
+    document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+        el.style.display = 'block';
+    });
+
+    // Activer le bouton sélectionné
+    const activeBtn = document.getElementById(`btn-${lang}`);
+    if (activeBtn) {
+        activeBtn.className = "px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm";
+    }
+
+    // Direction du texte
+    if (lang === 'ar') {
+        document.documentElement.dir = 'rtl';
+        document.documentElement.lang = 'ar';
+    } else {
+        document.documentElement.dir = 'ltr';
+        document.documentElement.lang = lang;
+    }
+}
+
+// Initialiser en arabe par défaut
+setLanguage('ar');
+```[cite: 141]
     </script>
 </body>
 </html>
