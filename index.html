@@ -90,40 +90,64 @@
                 </div>
             </div>
         </div>
-        <!-- ANNOUNCEMENT / TICKER BAR (شريط الإعلانات والمستجدات المبتكر) -->
-<div class="bg-slate-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-slate-800 relative z-40 overflow-hidden">
+        <!-- ANNOUNCEMENT / TICKER BAR (شريط المستجدات المبتكر) -->
+<div class="bg-slate-900 text-white text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800 relative z-40 overflow-hidden">
     <div class="max-w-7xl mx-auto flex items-center gap-3">
         
         <!-- شارة تنبيه برّاقة -->
         <div class="flex items-center gap-1.5 bg-sky-500/20 text-sky-300 border border-sky-500/40 px-2.5 py-0.5 rounded-full font-bold text-xs shrink-0 animate-pulse">
             <span class="w-2 h-2 rounded-full bg-sky-400 inline-block"></span>
-            <span class="lang-ar">إعلان هام</span>
+            <span class="lang-ar">مستجدات</span>
             <span class="lang-fr">ACTU</span>
             <span class="lang-en">NEWS</span>
             <span class="lang-de">INFO</span>
         </div>
 
-        <!-- نص الإعلان المتغير حسب اللغة -->
-        <div class="overflow-hidden whitespace-nowrap w-full">
-            <!-- النص العربي -->
+        <!-- النصوص المتحركة / المتغيرة -->
+        <div class="overflow-hidden w-full relative h-6">
+            
+            <!-- النصوص باللغة العربية -->
             <div class="lang-ar text-slate-300 font-medium">
-                🎓 <strong class="text-white">جديد الدورات التكوينية:</strong> التسجيل مفتوح الآن في ورشات العمل حول <span class="text-sky-400">"الحوكمة المناخية وإزالة الكربون من العمليات الصناعية"</span> | 📑 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQstd4amnfBcOQpbvMRw6jBHUFuPUlfrzlkK1eIaRr_aCb6A/viewform?usp=header" class="underline text-sky-300 hover:text-sky-200">احجز مقعدك أو استفسر عن البرامج القادمة</a>
+                <div class="ticker-slider space-y-1">
+                    <!-- الخبر 1: ورشات وتدريب -->
+                    <div class="ticker-item truncate">
+                        🎓 <strong class="text-white">جديد الدورات:</strong> التسجيل مفتوح في ورشة <span class="text-sky-400">"إزالة الكربون من العمليات الصناعية"</span> | <a href="https://forms.gle/VOTRE_LIEN" target="_blank" class="underline text-sky-300 hover:text-sky-200">سجل الآن عبر النموذج</a>
+                    </div>
+                    <!-- الخبر 2: أبحاث جديدة -->
+                    <div class="ticker-item truncate hidden">
+                        📑 <strong class="text-white">بحث جديد:</strong> تم نشر ورقة بحثية حول <span class="text-sky-400">"الحوكمة البيئية والتحول الرقمي 4.0"</span> | <a href="https://drive.google.com/file/d/1QB6Q_e_1Lk3Q8_CxeKMPfr7jpIbPsL5t/view?usp=sharing" target="_blank" class="underline text-sky-300 hover:text-sky-200">قراءة الملخص</a>
+                    </div>
+                    <!-- الخبر 3: دعوة للتعاون -->
+                    <div class="ticker-item truncate hidden">
+                        🤝 <strong class="text-white">فرص الشراكة:</strong> متاح للتدريب الدولي والاستشارات المؤسساتية والأكاديمية | <a href="mailto:ing.zsami1@gmail.com" class="underline text-sky-300 hover:text-sky-200">تواصل معي مباشرة</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- النص الفرنسي -->
+            <!-- النصوص باللغة الفرنسية -->
             <div class="lang-fr text-slate-300 font-medium">
-                🎓 <strong class="text-white">Prochaines Formations :</strong> Inscriptions ouvertes pour les ateliers sur la <span class="text-sky-400">"Décarbonation des procédés industriels & Gouvernance Climatique"</span> | 📑 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQstd4amnfBcOQpbvMRw6jBHUFuPUlfrzlkK1eIaRr_aCb6A/viewform?usp=header" class="underline text-sky-300 hover:text-sky-200">Contactez-nous pour réserver</a>
+                <div class="ticker-slider space-y-1">
+                    <div class="ticker-item truncate">
+                        🎓 <strong class="text-white">Formation Exécutive :</strong> Inscriptions ouvertes pour l'atelier <span class="text-sky-400">"Décarbonation des procédés industriels"</span> | <a href="https://forms.gle/VOTRE_LIEN" target="_blank" class="underline text-sky-300 hover:text-sky-200">S'inscrire</a>
+                    </div>
+                    <div class="ticker-item truncate hidden">
+                        📑 <strong class="text-white">Publication :</strong> Nouvel article sur la <span class="text-sky-400">"Gouvernance Environnementale & Industrie 4.0"</span> | <a href="https://drive.google.com/file/d/1QB6Q_e_1Lk3Q8_CxeKMPfr7jpIbPsL5t/view?usp=sharing" target="_blank" class="underline text-sky-300 hover:text-sky-200">Lire l'article</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- النص الإنجليزي -->
+            <!-- النصوص باللغة الإنجليزية -->
             <div class="lang-en text-slate-300 font-medium">
-                🎓 <strong class="text-white">Upcoming Executive Training:</strong> Open registration for workshops on <span class="text-sky-400">"Industrial Process Decarbonization & Climate Governance"</span> | 📑 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQstd4amnfBcOQpbvMRw6jBHUFuPUlfrzlkK1eIaRr_aCb6A/viewform?usp=header" class="underline text-sky-300 hover:text-sky-200">Inquire for bookings & partnerships</a>
+                <div class="ticker-slider space-y-1">
+                    <div class="ticker-item truncate">
+                        🎓 <strong class="text-white">Executive Training:</strong> Registration open for <span class="text-sky-400">"Industrial Decarbonization & Climate Governance"</span> | <a href="https://forms.gle/VOTRE_LIEN" target="_blank" class="underline text-sky-300 hover:text-sky-200">Register Now</a>
+                    </div>
+                    <div class="ticker-item truncate hidden">
+                        🤝 <strong class="text-white">Collaboration:</strong> Available for Keynote Speaking, Academic & EHS Consulting | <a href="mailto:ing.zsami1@gmail.com" class="underline text-sky-300 hover:text-sky-200">Get in touch</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- النص الألماني -->
-            <div class="lang-de text-slate-300 font-medium">
-                🎓 <strong class="text-white">Nächste Schulungen:</strong> Anmeldung möglich für Workshops zu <span class="text-sky-400">"Dekarbonisierung von Industrieprozessen & Klimagovernance"</span> | 📑 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQstd4amnfBcOQpbvMRw6jBHUFuPUlfrzlkK1eIaRr_aCb6A/viewform?usp=header" class="underline text-sky-300 hover:text-sky-200">Jetzt anfragen</a>
-            </div>
         </div>
 
     </div>
@@ -644,6 +668,61 @@
 
         // Initialize with Arabic
         setLanguage('ar');
+    </script>
+    <script>
+    // سكريبت تبديل اللغات وتفعيل شريط الإعلانات المتحرك
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-ar, .lang-fr, .lang-en, .lang-de').forEach(el => {
+                el.style.display = 'none';
+            });
+
+            ['ar', 'fr', 'en', 'de'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (btn) {
+                    btn.className = "flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900";
+                }
+            });
+
+            document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+                el.style.display = 'block';
+            });
+
+            const activeBtn = document.getElementById(`btn-${lang}`);
+            if (activeBtn) {
+                activeBtn.className = "flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm";
+            }
+
+            if (lang === 'ar') {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+            } else {
+                document.documentElement.dir = 'ltr';
+                document.documentElement.lang = lang;
+            }
+        }
+
+        // سكريبت تحريك الإعلانات أوتوماتيكياً كل 4 ثوانٍ
+        function startTicker() {
+            const activeLang = document.documentElement.lang || 'ar';
+            const activeContainer = document.querySelector(`.lang-${activeLang} .ticker-slider`);
+            if (!activeContainer) return;
+            
+            const items = activeContainer.querySelectorAll('.ticker-item');
+            if (items.length <= 1) return;
+
+            let currentIndex = 0;
+            setInterval(() => {
+                items[currentIndex].classList.add('hidden');
+                currentIndex = (currentIndex + 1) % items.length;
+                items[currentIndex].classList.remove('hidden');
+            }, 4000);
+        }
+
+        // تشغيل التهيئة عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('ar');
+            startTicker();
+        });
     </script>
 </body>
 </html>
