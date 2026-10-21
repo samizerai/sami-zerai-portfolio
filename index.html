@@ -16,7 +16,7 @@
             background-color: #f8fafc;
             color: #1e293b;
         }
-        .lang-en, .lang-fr {
+        .lang-en, .lang-fr, .lang-de {
             display: none;
             direction: ltr;
         }
@@ -51,213 +51,180 @@
             </div>
 
             <!-- Language Switcher Buttons with Flags -->
-<div class="flex items-center space-x-1 sm:space-x-2 bg-gray-100 p-1 rounded-lg border border-gray-200">
-    <!-- زر العربية -->
-    <button onclick="setLanguage('ar')" id="btn-ar" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm">
-        <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#E70013"/><circle cx="600" cy="400" r="200" fill="#FFF"/><circle cx="600" cy="400" r="150" fill="#E70013"/><circle cx="640" cy="400" r="120" fill="#FFF"/><polygon points="600,310 624,375 690,375 636,415 657,480 600,440 543,480 564,415 510,375 576,375" fill="#E70013"/></svg>
-        العربية
-    </button>
-
-    <!-- زر الفرنسية -->
-    <button onclick="setLanguage('fr')" id="btn-fr" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900">
-        <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 900 600"><rect width="300" height="600" fill="#0055A5"/><rect x="300" width="300" height="600" fill="#FFFFFF"/><rect x="600" width="300" height="600" fill="#EF4135"/></svg>
-        Français
-    </button>
-
-    <!-- زر الإنجليزية -->
-    <button onclick="setLanguage('en')" id="btn-en" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900">
-        <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 60 30"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s)"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
-        English
-    </button>
-
-    <!-- زر الألمانية -->
-    <button onclick="setLanguage('de')" id="btn-de" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900">
-        <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect width="5" height="2" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>
-        Deutsch
-    </button>
-</div>
+            <div class="flex items-center space-x-1 sm:space-x-2 bg-gray-100 p-1 rounded-lg border border-gray-200">
+                <button onclick="setLanguage('ar')" id="btn-ar" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm">
+                    <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#E70013"/><circle cx="600" cy="400" r="200" fill="#FFF"/><circle cx="600" cy="400" r="150" fill="#E70013"/><circle cx="640" cy="400" r="120" fill="#FFF"/><polygon points="600,310 624,375 690,375 636,415 657,480 600,440 543,480 564,415 510,375 576,375" fill="#E70013"/></svg>
+                    العربية
+                </button>
+                <button onclick="setLanguage('fr')" id="btn-fr" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900">
+                    <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 900 600"><rect width="300" height="600" fill="#0055A5"/><rect x="300" width="300" height="600" fill="#FFFFFF"/><rect x="600" width="300" height="600" fill="#EF4135"/></svg>
+                    Français
+                </button>
+                <button onclick="setLanguage('en')" id="btn-en" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900">
+                    <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 60 30"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s)"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
+                    English
+                </button>
+                <button onclick="setLanguage('de')" id="btn-de" class="flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900">
+                    <svg class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect width="5" height="2" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>
+                    Deutsch
+                </button>
+            </div>
         </div>
+
         <!-- TOP BAR - الجمهورية التونسية -->
-<div class="bg-red-700 text-white py-2 px-4 shadow-inner">
-    <div class="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-semibold">
-        <!-- علم الجمهورية التونسية واسم الدولة -->
-        <div class="flex items-center space-x-2 space-x-reverse">
-            <!-- علم تونس بصيغة SVG عالية الدقة -->
-            <svg class="w-6 h-4 rounded shadow-sm border border-white/20" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1200" height="800" fill="#E70013"/>
-                <circle cx="600" cy="400" r="200" fill="#FFF"/>
-                <circle cx="600" cy="400" r="150" fill="#E70013"/>
-                <circle cx="640" cy="400" r="120" fill="#FFF"/>
-                <polygon points="600,310 624,375 690,375 636,415 657,480 600,440 543,480 564,415 510,375 576,375" fill="#E70013"/>
-            </svg>
-            <span class="tracking-wide">الجمهورية التونسية</span>
-            <span class="text-white/60 font-normal hidden md:inline">| Répubique Tunisienne</span>
+        <div class="bg-red-700 text-white py-2 px-4 shadow-inner">
+            <div class="max-w-7xl mx-auto flex items-center justify-between text-xs sm:text-sm font-semibold">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <svg class="w-6 h-4 rounded shadow-sm border border-white/20" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="1200" height="800" fill="#E70013"/>
+                        <circle cx="600" cy="400" r="200" fill="#FFF"/>
+                        <circle cx="600" cy="400" r="150" fill="#E70013"/>
+                        <circle cx="640" cy="400" r="120" fill="#FFF"/>
+                        <polygon points="600,310 624,375 690,375 636,415 657,480 600,440 543,480 564,415 510,375 576,375" fill="#E70013"/>
+                    </svg>
+                    <span class="tracking-wide">الجمهورية التونسية</span>
+                    <span class="text-white/60 font-normal hidden md:inline">| République Tunisienne</span>
+                </div>
+                <div class="text-white/90 text-xs font-normal hidden sm:block">
+                    حرية - نظام - عدالة
+                </div>
+            </div>
         </div>
-        <!-- الشعار الوطني -->
-        <div class="text-white/90 text-xs font-normal hidden sm:block">
-            حرية - نظام - عدالة
-        </div>
-    </div>
-</div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="bg-navy text-white py-16 lg:py-24 relative overflow-hidden">
+    <section class="bg-navy text-white py-12 lg:py-16 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-12 gap-8 items-center">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left/Text Column (8 cols) -->
                 <div class="md:col-span-8 space-y-6">
+                    
                     <!-- AR Hero -->
-                    <div class="lang-ar space-y-4">
+                    <div class="lang-ar space-y-4" dir="rtl">
                         <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-300 text-sm font-medium rounded-full border border-sky-500/30">
                             مهندس عام & كاهية مدير بوزارة الصناعة والمناجم والطاقة بتونس
                         </span>
                         <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
                             م. سامي زارعي
                         </h1>
-                        <p class="text-lg text-slate-300 leading-relaxed">
-                            <!-- AR Hero / Presentation -->
-<div class="lang-ar space-y-4" dir="rtl">
-    <!-- Introduction générale -->
-    <p class="text-base text-slate-300 leading-relaxed">
-        <strong>مهندس عام في الهندسة الصناعية</strong> تخرجت من المدرسة الوطنية للمهندسين بتونس (ENIT)، وأشغل حالياً منصب <strong>كاهية مدير بوزارة الصناعة والمناجم والطاقة</strong>، بخبرة تمتد لأكثر من 15 عاماً في الإشراف على القطاع الصناعي (أكثر من 630 مؤسسة صناعية)، صياغة التشريعات والسياسات التنموية، التطوير المستمر وتطبيق معايير السلامة والاستدامة. أجمع بين الخبرة الميدانية والهندسية في القطاع الصناعي والتخصص الأكاديمي والتدريبي المعتمد في مجالات التنمية المستدامة والعمل المناخي، وأسعى لنقل هذه الخبرات وبناء كفاءات المستقبل في المنطقة العربية ودول الخليج، وخاصة المملكة العربية السعودية.
-    </p>
-
-    <!-- Section مجالات التخصص والخبرة التدريبية -->
-    <div class="pt-2">
-        <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-2">🌱 مجالات التخصص والخبرة التدريبية:</h2>
-        <ul class="space-y-2 text-sm text-slate-300">
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>العمل المناخي وإزالة الكربون:</strong> مدرب معتمد في التغيرات المناخية (ToT)، الحوكمة المناخية، أسواق الكربون، واستراتيجيات "إزالة الكربون من العمليات الصناعية".</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>التنمية المستدامة والحوكمة (ESG):</strong> سفير ومدرب معتمد (ToT) من المنظمة العربية للتنمية المستدامة (ARABSDO) والمنظمة الدولية (IBSDO)، دمج أهداف التنمية المستدامة والاقتصاد الدائري.</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>السلامة البيئية والصناعية:</strong> تقييم الأخطار التكنولوجية والصناعية، دراسة ملفات المؤسسات المصنفة، وإدارة النظم وفق مواصفات ISO 14001 و ISO 45001.</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>التميز التشغيلي وإدارة المشاريع:</strong> مدقق رئيسي ISO 9001:2015، شريك معتمد في Lean Manufacturing 4.0، وتطبيق فلسفة إدارة المشاريع (PMP و ILO).</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Section الرؤية التدريبية والأكاديمية -->
-    <div class="pt-2">
-        <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-1">💻 الرؤية التدريبية والأكاديمية:</h2>
-        <p class="text-sm text-slate-300 leading-relaxed">
-            إيماناً بأن العلم والتعليم لا يحصرهما حد جغرافي، أعمل كمدرب ومحاضر دولي يقدم برامج تدريبية افتراضية وحضورية عالية الجودة، تعتمد على ربط الجانب النظري بالتطبيقات الصناعية الحقيقية لتمكين المحترفين والأكاديميين من إحداث أثر مستدام.
-        </p>
-    </div>
-
-    <!-- Call to action -->
-    <p class="text-xs text-sky-300 font-semibold pt-1">
-        📩 مستعد للمشاركة كعضو هيئة تدريب/تدريس مدعو (Faculty Member)، وتقديم استشارات وبرامج تدريبية متخصصة.
-    </p>
-</div>.
+                        <p class="text-base text-slate-300 leading-relaxed">
+                            <strong>مهندس عام في الهندسة الصناعية</strong> تخرجت من المدرسة الوطنية للمهندسين بتونس (ENIT)، وأشغل حالياً منصب <strong>كاهية مدير بوزارة الصناعة والمناجم والطاقة</strong>، بخبرة تمتد لأكثر من 15 عاماً في الإشراف على القطاع الصناعي (أكثر من 630 مؤسسة صناعية)، صياغة التشريعات والسياسات التنموية، التطوير المستمر وتطبيق معايير السلامة والاستدامة. أجمع بين الخبرة الميدانية والهندسية في القطاع الصناعي والتخصص الأكاديمي والتدريبي المعتمد في مجالات التنمية المستدامة والعمل المناخي، وأسعى لنقل هذه الخبرات وبناء كفاءات المستقبل في المنطقة العربية ودول الخليج، وخاصة المملكة العربية السعودية.
+                        </p>
+                        <div class="pt-2">
+                            <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-2">🌱 مجالات التخصص والخبرة التدريبية:</h2>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>العمل المناخي وإزالة الكربون:</strong> مدرب معتمد في التغيرات المناخية (ToT)، الحوكمة المناخية، أسواق الكربون، واستراتيجيات "إزالة الكربون من العمليات الصناعية".</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>التنمية المستدامة والحوكمة (ESG):</strong> سفير ومدرب معتمد (ToT) من المنظمة العربية للتنمية المستدامة (ARABSDO) والمنظمة الدولية (IBSDO)، دمج أهداف التنمية المستدامة والاقتصاد الدائري.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>السلامة البيئية والصناعية:</strong> تقييم الأخطار التكنولوجية والصناعية، دراسة ملفات المؤسسات المصنفة، وإدارة النظم وفق مواصفات ISO 14001 و ISO 45001.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>التميز التشغيلي وإدارة المشاريع:</strong> مدقق رئيسي ISO 9001:2015، شريك معتمد في Lean Manufacturing 4.0، وتطبيق فلسفة إدارة المشاريع (PMP و ILO).</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-2">
+                            <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-1">💻 الرؤية التدريبية والأكاديمية:</h2>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                إيماناً بأن العلم والتعليم لا يحصرهما حد جغرافي، أعمل كمدرب ومحاضر دولي يقدم برامج تدريبية افتراضية وحضورية عالية الجودة، تعتمد على ربط الجانب النظري بالتطبيقات الصناعية الحقيقية لتمكين المحترفين والأكاديميين من إحداث أثر مستدام.
+                            </p>
+                        </div>
+                        <p class="text-xs text-sky-300 font-semibold pt-1">
+                            📩 مستعد للمشاركة كعضو هيئة تدريب/تدريس مدعو (Faculty Member)، وتقديم استشارات وبرامج تدريبية متخصصة.
                         </p>
                     </div>
 
                     <!-- FR Hero -->
                     <div class="lang-fr space-y-4">
                         <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-300 text-sm font-medium rounded-full border border-sky-500/30">
-                            Ingénieur Général & Sous-Directeur au Ministère de l'industrie, des mines et de l'énergie
+                            Ingénieur Général & Sous-Directeur au Ministère de l'Industrie
                         </span>
                         <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
                             Sami ZERAI
                         </h1>
-                        <p class="text-lg text-slate-300 leading-relaxed">
-<!-- FR Hero / Presentation -->
-<div class="lang-fr space-y-4">
-       <!-- Introduction générale -->
-    <p class="text-base text-slate-300 leading-relaxed">
-        <strong>Ingénieur Général d'État</strong> diplômé de l'École Nationale d'Ingénieurs de Tunis (ENIT) et <strong>Sous-Directeur au Ministère de l'Industrie, des Mines et de l'Énergie</strong>, je cumule plus de 15 ans d'expérience au cœur des politiques industrielles, <strong>l'excellence opérationnelle</strong>, de la gouvernance environnementale, de la sécurité industrielle et de la décarbonation des procédés.
-    </p>
-
-    <!-- Liste structurée avec puces à la ligne -->
-    <ul class="space-y-2 text-sm text-slate-300 pt-2">
-        <li class="flex items-start gap-2">
-            <span class="text-sky-400 font-bold">🌱</span>
-            <span><strong>Action Climatique & Décarbonation :</strong> Formateur certifié ToT (Climate Diplomacy Academy / ADN), marchés du carbone, gouvernance climatique et stratégie de réduction de l'empreinte carbone.</span>
-        </li>
-        <li class="flex items-start gap-2">
-            <span class="text-sky-400 font-bold">🌍</span>
-            <span><strong>Développement Durable & ESG :</strong> Ambassadeur et Formateur certifié ToT (ARABSDO / IBSDO), intégration des ODD, économie circulaire, gestion environnementale.</span>
-        </li>
-        <li class="flex items-start gap-2">
-            <span class="text-sky-400 font-bold">🛡️</span>
-            <span><strong>Infrastructures & Sécurité Industrielle :</strong> Évaluation des risques technologiques et industriels (ISO 14001, ISO 45001, INRS), audits de conformité et réglementation.</span>
-        </li>
-        <li class="flex items-start gap-2">
-            <span class="text-sky-400 font-bold">⚙️</span>
-            <span><strong>Excellence Opérationnelle & Management :</strong> Partenaire homologué Lean Manufacturing 4.0, Auditeur ISO 9001:2015, gestion de projets complexes (PMP Prep, ILO).</span>
-        </li>
-        <li class="flex items-start gap-2">
-            <span class="text-sky-400 font-bold">🎓</span>
-            <span><strong>Engagement Pédagogique & Formation :</strong> Conception et animation de programmes de formation interactifs et orientés impact pour accompagner la transition écologique.</span>
-        </li>
-    </ul>
-</div>
+                        <p class="text-base text-slate-300 leading-relaxed">
+                            <strong>Ingénieur Général d'État</strong> diplômé de l'École Nationale d'Ingénieurs de Tunis (ENIT) et <strong>Sous-Directeur au Ministère de l'Industrie, des Mines et de l'Énergie</strong>, je cumule plus de 15 ans d'expérience au cœur des politiques industrielles, <strong>l'excellence opérationnelle</strong>, de la gouvernance environnementale, de la sécurité industrielle et de la décarbonation des procédés.
                         </p>
+                        <ul class="space-y-2 text-sm text-slate-300 pt-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-sky-400 font-bold">🌱</span>
+                                <span><strong>Action Climatique & Décarbonation :</strong> Formateur certifié ToT (Climate Diplomacy Academy / ADN), marchés du carbone, gouvernance climatique et stratégie de réduction de l'empreinte carbone.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-sky-400 font-bold">🌍</span>
+                                <span><strong>Développement Durable & ESG :</strong> Ambassadeur et Formateur certifié ToT (ARABSDO / IBSDO), intégration des ODD, économie circulaire, gestion environnementale.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-sky-400 font-bold">🛡️</span>
+                                <span><strong>Infrastructures & Sécurité Industrielle :</strong> Évaluation des risques technologiques et industriels (ISO 14001, ISO 45001, INRS), audits de conformité et réglementation.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-sky-400 font-bold">⚙️</span>
+                                <span><strong>Excellence Opérationnelle & Management :</strong> Partenaire homologué Lean Manufacturing 4.0, Auditeur ISO 9001:2015, gestion de projets complexes (PMP Prep, ILO).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-sky-400 font-bold">🎓</span>
+                                <span><strong>Engagement Pédagogique & Formation :</strong> Conception et animation de programmes de formation interactifs et orientés impact pour accompagner la transition écologique.</span>
+                            </li>
+                        </ul>
                     </div>
 
                     <!-- EN Hero -->
                     <div class="lang-en space-y-4">
                         <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-300 text-sm font-medium rounded-full border border-sky-500/30">
-                            General Engineer & Deputy Director at the Ministry of Industry, Mines, and Energy 
+                            General Engineer & Deputy Director at the Ministry of Industry
                         </span>
                         <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
                             Sami ZERAI
                         </h1>
-                        <p class="text-lg text-slate-300 leading-relaxed">
-<!-- EN Hero / Presentation -->
-<div class="lang-en space-y-4">
-    <!-- Introduction générale -->
-    <p class="text-base text-slate-300 leading-relaxed">
-        As a <strong>General Industrial Engineer</strong> (ENIT graduate) and <strong>Deputy Director at the Ministry of Industry, Mines, and Energy</strong> with over 15 years of leadership experience, I bridge the gap between high-level industrial governance, <strong>operational excellence</strong>, and global climate action. Having overseen 630+ industrial entities, drafted strategic legislation, and evaluated thousands of complex technical frameworks, I bring a pragmatic, regulation-backed, and impact-driven approach to sustainability education and strategy.
-    </p>
+                        <p class="text-base text-slate-300 leading-relaxed">
+                            As a <strong>General Industrial Engineer</strong> (ENIT graduate) and <strong>Deputy Director at the Ministry of Industry, Mines, and Energy</strong> with over 15 years of leadership experience, I bridge the gap between high-level industrial governance, <strong>operational excellence</strong>, and global climate action. Having overseen 630+ industrial entities, drafted strategic legislation, and evaluated thousands of complex technical frameworks, I bring a pragmatic, regulation-backed, and impact-driven approach to sustainability education and strategy.
+                        </p>
+                        <div class="pt-2">
+                            <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-2">🌱 Core Expertise & Teaching Capabilities:</h2>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>Climate Action, Decarbonization & Carbon Markets:</strong> Certified Climate Change Trainer (ToT - Climate Diplomacy Academy), expertise in industrial process decarbonization and climate advocacy.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>Sustainability, ESG & Circular Economy:</strong> Certified Sustainable Development Ambassador & Trainer (ToT - ARABSDO / IBSDO), integrating SDGs into corporate strategies, waste reduction, and circular models.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>Green Industry, EHS & Environmental Management:</strong> Industrial risk assessment, safety systems, ISO 14001 (Environmental Management) & ISO 45001 (OH&S) standards.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-sky-400 font-bold">•</span>
+                                    <span><strong>Operational Excellence & Leadership:</strong> Certified Lead Auditor ISO 9001:2015, Certified Partner in Lean Manufacturing 4.0, PMP & ILO project management background.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-    <!-- Section Core Expertise & Teaching Capabilities -->
-    <div class="pt-2">
-        <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-2">🌱 Core Expertise & Teaching Capabilities:</h2>
-        <ul class="space-y-2 text-sm text-slate-300">
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>Climate Action, Decarbonization & Carbon Markets:</strong> Certified Climate Change Trainer (ToT - Climate Diplomacy Academy), expertise in industrial process decarbonization and climate advocacy.</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>Sustainability, ESG & Circular Economy:</strong> Certified Sustainable Development Ambassador & Trainer (ToT - ARABSDO / IBSDO), integrating SDGs into corporate strategies, waste reduction, and circular models.</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>Green Industry, EHS & Environmental Management:</strong> Industrial risk assessment, safety systems, ISO 14001 (Environmental Management) & ISO 45001 (OH&S) standards.</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-sky-400 font-bold">•</span>
-                <span><strong>Operational Excellence & Leadership:</strong> Certified Lead Auditor ISO 9001:2015, Certified Partner in Lean Manufacturing 4.0, PMP & ILO project management background.</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Section Academic Vision -->
-    <div class="pt-2">
-        <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-1">💻 Academic & Executive Training Vision:</h2>
-        <p class="text-sm text-slate-300 leading-relaxed">
-            Believing that quality sustainability education must be accessible worldwide, I actively contribute as an international trainer, faculty candidate, and consultant. I design practical, real-world virtual and in-person training modules tailored for professionals, corporate leaders, and academic networks across Saudi Arabia, the MENA region, and globally.
-        </p>
-    </div>
-
-    <!-- Call to action -->
-    <p class="text-xs text-sky-300 font-semibold pt-1">
-        📩 Open for faculty roles, international training programs, and consulting partnerships.
-    </p>
-</div>
+                    <!-- DE Hero -->
+                    <div class="lang-de space-y-4">
+                        <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-300 text-sm font-medium rounded-full border border-sky-500/30">
+                            Diplom-Ingenieur & Stellvertretender Direktor im Ministerium
+                        </span>
+                        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+                            Sami ZERAI
+                        </h1>
+                        <p class="text-base text-slate-300 leading-relaxed">
+                            Wirtschaftsingenieur mit über 15 Jahren Erfahrung im Industriesektor, der industriellen Sicherheit und der nachhaltigen Entwicklung. Zertifizierter Trainer und Botschafter für nachhaltige Entwicklung und Klimadiplomatie. Experte für Regulierung und Risikomanagement.
                         </p>
                     </div>
+
                     <!-- Quick Contacts -->
                     <div class="flex flex-wrap gap-4 pt-4 text-sm text-slate-300 border-t border-slate-700/60">
                         <a href="mailto:ing.zsami1@gmail.com" class="flex items-center gap-2 hover:text-sky-400"><i class="fa-solid fa-envelope text-sky-400"></i> ing.zsami1@gmail.com</a>
@@ -266,7 +233,7 @@
                     </div>
                 </div>
 
-                <!-- Profile Badge / Highlights -->
+                <!-- Profile Badge / Highlights (4 cols) -->
                 <div class="md:col-span-4 flex justify-center">
                     <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 shadow-2xl text-center w-full max-w-sm">
                         <div class="w-24 h-24 mx-auto rounded-full border-2 border-accent overflow-hidden shadow-md mb-4 flex items-center justify-center bg-white">
@@ -290,6 +257,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -304,6 +272,7 @@
                 <h2 class="text-2xl font-bold text-slate-900 lang-ar">الخبرة المهنية</h2>
                 <h2 class="text-2xl font-bold text-slate-900 lang-fr">Expériences Professionnelles</h2>
                 <h2 class="text-2xl font-bold text-slate-900 lang-en">Work Experience</h2>
+                <h2 class="text-2xl font-bold text-slate-900 lang-de">Berufserfahrung</h2>
             </div>
 
             <div class="space-y-6">
@@ -394,8 +363,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Cert Card -->
                 <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex gap-4 items-start card-hover">
                     <div class="p-3 bg-sky-50 text-accent rounded-lg text-2xl"><i class="fa-solid fa-leaf"></i></div>
                     <div>
@@ -403,8 +370,6 @@
                         <p class="text-xs text-slate-500 mt-1">Arab Sustainable Development Organization (ARABSDO / IBSDO) - 2026</p>
                     </div>
                 </div>
-
-                <!-- Cert Card -->
                 <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex gap-4 items-start card-hover">
                     <div class="p-3 bg-emerald-50 text-emerald-600 rounded-lg text-2xl"><i class="fa-solid fa-earth-americas"></i></div>
                     <div>
@@ -412,8 +377,6 @@
                         <p class="text-xs text-slate-500 mt-1">Friedrich Naumann Foundation & Académie de Dialogue National - 2026</p>
                     </div>
                 </div>
-
-                <!-- Cert Card -->
                 <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex gap-4 items-start card-hover">
                     <div class="p-3 bg-indigo-50 text-indigo-600 rounded-lg text-2xl"><i class="fa-solid fa-industry"></i></div>
                     <div>
@@ -421,8 +384,6 @@
                         <p class="text-xs text-slate-500 mt-1">Festo Learning Experience - 2025</p>
                     </div>
                 </div>
-
-                <!-- Cert Card -->
                 <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex gap-4 items-start card-hover">
                     <div class="p-3 bg-blue-50 text-blue-600 rounded-lg text-2xl"><i class="fa-solid fa-certificate"></i></div>
                     <div>
@@ -430,8 +391,6 @@
                         <p class="text-xs text-slate-500 mt-1">Certified Lead Auditor Course - 2024</p>
                     </div>
                 </div>
-
-                <!-- Cert Card -->
                 <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex gap-4 items-start card-hover">
                     <div class="p-3 bg-amber-50 text-amber-600 rounded-lg text-2xl"><i class="fa-solid fa-chart-line"></i></div>
                     <div>
@@ -439,8 +398,6 @@
                         <p class="text-xs text-slate-500 mt-1">6sigmastudy & Heptagon Network - 2024 / 2025</p>
                     </div>
                 </div>
-
-                <!-- Cert Card -->
                 <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex gap-4 items-start card-hover">
                     <div class="p-3 bg-purple-50 text-purple-600 rounded-lg text-2xl"><i class="fa-solid fa-tasks"></i></div>
                     <div>
@@ -472,7 +429,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Skill Category 1 -->
                 <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                     <h3 class="font-bold text-slate-900 text-base mb-4 border-b pb-2 text-accent">
                         <i class="fa-solid fa-shield-halved ml-1 mr-1"></i>
@@ -488,8 +444,6 @@
                         <li>• إدارة المخاطر الكيميائية والصناعية</li>
                     </ul>
                 </div>
-
-                <!-- Skill Category 2 -->
                 <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                     <h3 class="font-bold text-slate-900 text-base mb-4 border-b pb-2 text-accent">
                         <i class="fa-solid fa-microchip ml-1 mr-1"></i>
@@ -505,8 +459,6 @@
                         <li>• التميز التشغيلي (Operational Excellence)</li>
                     </ul>
                 </div>
-
-                <!-- Skill Category 3 -->
                 <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                     <h3 class="font-bold text-slate-900 text-base mb-4 border-b pb-2 text-accent">
                         <i class="fa-solid fa-code ml-1 mr-1"></i>
@@ -574,7 +526,6 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- اللغة العربية -->
                 <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center gap-3 shadow-sm">
                     <svg class="w-8 h-6 rounded shadow-sm border border-gray-100 flex-shrink-0" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#E70013"/><circle cx="600" cy="400" r="200" fill="#FFF"/><circle cx="600" cy="400" r="150" fill="#E70013"/><circle cx="640" cy="400" r="120" fill="#FFF"/><polygon points="600,310 624,375 690,375 636,415 657,480 600,440 543,480 564,415 510,375 576,375" fill="#E70013"/></svg>
                     <div>
@@ -582,8 +533,6 @@
                         <span class="text-xs text-accent font-semibold">اللغة الأم / Native</span>
                     </div>
                 </div>
-
-                <!-- اللغة الفرنسية -->
                 <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center gap-3 shadow-sm">
                     <svg class="w-8 h-6 rounded shadow-sm border border-gray-100 flex-shrink-0" viewBox="0 0 900 600"><rect width="300" height="600" fill="#0055A5"/><rect x="300" width="300" height="600" fill="#FFFFFF"/><rect x="600" width="300" height="600" fill="#EF4135"/></svg>
                     <div>
@@ -591,8 +540,6 @@
                         <span class="text-xs text-accent font-semibold">متقدم B2/C1 / Advanced</span>
                     </div>
                 </div>
-
-                <!-- اللغة الإنجليزية -->
                 <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center gap-3 shadow-sm">
                     <svg class="w-8 h-6 rounded shadow-sm border border-gray-100 flex-shrink-0" viewBox="0 0 60 30"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s2)"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
                     <div>
@@ -600,8 +547,6 @@
                         <span class="text-xs text-accent font-semibold">متوسط B1 (Voxy)</span>
                     </div>
                 </div>
-
-                <!-- اللغة الألمانية -->
                 <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center gap-3 shadow-sm">
                     <svg class="w-8 h-6 rounded shadow-sm border border-gray-100 flex-shrink-0" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect width="5" height="2" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>
                     <div>
@@ -626,14 +571,16 @@
     <script>
         function setLanguage(lang) {
             // Hide all language content
-            document.querySelectorAll('.lang-ar, .lang-fr, .lang-en').forEach(el => {
+            document.querySelectorAll('.lang-ar, .lang-fr, .lang-en, .lang-de').forEach(el => {
                 el.style.display = 'none';
             });
 
             // Reset buttons style
-            ['ar', 'fr', 'en'].forEach(l => {
+            ['ar', 'fr', 'en', 'de'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
-                btn.className = "px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900";
+                if (btn) {
+                    btn.className = "flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all text-gray-600 hover:text-slate-900";
+                }
             });
 
             // Show selected language content
@@ -643,7 +590,9 @@
 
             // Active button style
             const activeBtn = document.getElementById(`btn-${lang}`);
-            activeBtn.className = "px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm";
+            if (activeBtn) {
+                activeBtn.className = "flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-all bg-accent text-white shadow-sm";
+            }
 
             // HTML dir attribute
             if (lang === 'ar') {
