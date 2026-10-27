@@ -44,11 +44,22 @@
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
             <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-xl shadow-md">
-                    SZ
-                </div>
-                <span class="text-xl font-bold tracking-wide text-slate-800">سامي زارعي <span class="text-xs text-accent block font-normal">Sami Zerai</span></span>
-            </div>
+    <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-xl shadow-md">
+        SZ
+    </div>
+    
+    <!-- الاسم الذي يتغير حسب اللغة -->
+    <div class="text-xl font-bold tracking-wide text-slate-800">
+        <!-- يظهر بالعربية فقط -->
+        <span class="lang-ar block">
+            سامي زارعي <span class="text-xs text-accent block font-normal">Sami Zerai</span>
+        </span>
+        <!-- يظهر بالفرنسية، الإنجليزية، والألمانية -->
+        <span class="lang-fr lang-en lang-de block">
+            Sami ZERAI
+        </span>
+    </div>
+</div>
 
             <!-- Language Switcher Buttons with Flags -->
             <div class="flex items-center space-x-1 sm:space-x-2 bg-gray-100 p-1 rounded-lg border border-gray-200">
